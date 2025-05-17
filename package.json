@@ -1,0 +1,16 @@
+{
+  "name": "chatbot",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:backend": "yarn workspace backend start:dev",
+    "dev:frontend": "yarn workspace frontend dev"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dev-cujaban/chatbot.git",
+  
+  "license": "MIT"
+}
