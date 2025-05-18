@@ -63,8 +63,8 @@ export default function Chat() {
       {/* Chat window - only rendered if isOpen is true */}
       {isOpen && (
         <div
-          className="fixed bottom-0 right-0 m-6 w-[90vw] max-w-sm bg-white shadow-xl rounded-2xl p-4 flex flex-col justify-between h-[70vh]
-          md:w-96 dark:bg-black dark:border dark:border-white z-20"
+          className="fixed bottom-0 right-0 m-0 w-screen bg-white shadow-xl rounded-2xl p-4 flex flex-col justify-between h-[65vh]
+          md:m-6 md:w-96 dark:bg-black border border-gray-400 dark:border dark:border-white z-20"
         >
           <div className="flex justify-between items-center mb-2">
             <h2 className="text-lg font-bold dark:text-white">Chatbot</h2>
@@ -119,9 +119,10 @@ export default function Chat() {
       <div className="hover-animate text-center">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="hover-animate hover:text-blue-500 inline-flex justify-center items-center dark:text-white cursor-pointer"
+          className="border rounded-sm p-2 hover-animate hover:text-blue-500 inline-flex justify-center items-center dark:text-white cursor-pointer"
         >
           <MessageCircle />
+          <span className="font-bold ml-5">Chatbot</span>
         </button>
       </div>
     </div>

@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { ChatController } from './chat/chat.controller';
-import { ChatService } from './chat/chat.service';
-import { ProductsService } from './chat/products.service';
 import { ConfigModule } from '@nestjs/config';
+
+import { AppService } from './app.service';
+import { ChatService } from './chat/chat.service';
+import { ProductsService } from './products/products.service';
+
+import { AppController } from './app.controller';
+import { ChatController } from './chat/chat.controller';
 
 @Module({
   imports: [ConfigModule],

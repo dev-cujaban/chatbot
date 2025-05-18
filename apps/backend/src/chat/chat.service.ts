@@ -1,10 +1,9 @@
 import axios from 'axios';
 import { OpenAI } from 'openai';
 import { Injectable } from '@nestjs/common';
-import { ProductsService } from './products.service';
-import { ChatCompletionTool } from 'openai/resources/chat';
 import { ConfigService } from '@nestjs/config';
-
+import { ChatCompletionTool } from 'openai/resources/chat';
+import { ProductsService } from 'src/products/products.service';
 
 @Injectable()
 export class ChatService {

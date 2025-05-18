@@ -20,7 +20,7 @@ export class ProductsService implements OnModuleInit {
     private products: Product[] = [];
 
     onModuleInit() {
-        const csvFilePath = path.resolve(__dirname, '../../product_list_fixed.csv');
+        const csvFilePath = path.resolve(process.cwd(), 'assets/product_list_fixed.csv');
         const csvContent = fs.readFileSync(csvFilePath, { encoding: 'utf-8' });
         const records = parse(csvContent, {
             columns: true,

@@ -30,13 +30,12 @@ export default function ThemeButton() {
   };
 
   return (
-    <button onClick={toggleDarkMode} className="hover-animate cursor-pointer">
+    <button
+      onClick={toggleDarkMode}
+      className="hover-animate cursor-pointer px-3 py-2"
+    >
       {/* Show Sun icon if dark mode is active, Moon icon if light mode */}
-      {isDark ? (
-        <Sun className="ml-4 dark:text-white" />
-      ) : (
-        <Moon className="ml-4" />
-      )}
+      {isDark ? <Sun className="dark:text-white" /> : <Moon />}
     </button>
   );
 }
