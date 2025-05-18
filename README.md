@@ -70,3 +70,5 @@ curl --location 'http://localhost:3000/chat' \
     "message": "" // Example. I am looking for a phone, what do you have in the catalog?
 }'
 ```
+
+You can also visit http://localhost:3000/api to access the Swagger documentation.
