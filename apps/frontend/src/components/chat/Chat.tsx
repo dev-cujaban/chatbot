@@ -78,8 +78,7 @@ export default function Chat() {
           <div className="flex-1 overflow-y-auto mb-2 border-t dark:border-t-white pt-2 relative">
             {messages.length === 0 && (
               <p className="absolute bottom-2 w-xs left-1/2 -translate-x-1/2 text-xs text-gray-400 text-center">
-                ⚠️ This chat does not have memory — previous messages won't be
-                remembered.
+                ⚠️ {t("chat_memory_warning")}
               </p>
             )}
             <div className="flex flex-col space-y-2">

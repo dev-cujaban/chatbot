@@ -3,5 +3,6 @@
     "welcome_subtitle": "Try Our Chatbot Now",
     "project_description": "This project is an implementation that integrates <1>OpenAI</1> and an exchange rate service, using modern technologies like <3>NestJS</3> for the backend and <5>React</5> for the frontend, all built in <7>TypeScript</7>. The interface is styled with <9>Tailwind CSS</9>.",
     "project_advanced": "It uses the capabilities of <1>OpenAI Chat Completion</1> along with Function Calling to interpret and execute user instructions dynamically and accurately.",
-    "placeholder_input_msg": "Type a message..."
+    "placeholder_input_msg": "Type a message...",
+    "chat_memory_warning": "This chat does not have memory — previous messages won't be remembered."
 }
