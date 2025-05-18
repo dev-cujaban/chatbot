@@ -163,37 +163,38 @@ export class ChatService {
                         content: JSON.stringify(result),
                     },
                     {
-                        /* Formats the data sent to the user
-                        * Inside the message
-                        */
+                        /* Formats the data sent to the user */
                         role: 'system',
                         content: `
-                        You are a helpful assistant that responds to product search queries.
-
-                        When you reply, please always respond in the following JSON format ONLY (do NOT include any text outside the JSON):
-
-                        {
-                        "explanation": "Here is a brief explanation or summary of the products found.",
-                        "products": 
-                            [
-                                {
-                                "title": "Product title",
-                                "url": "Product URL",
-                                "imageUrl": "Product image URL",
-                                "price": "Price with currency",
-                                "discount": "Discount value (if any)",
-                                "productType": "Type of product"
-                                },
+                            You are a helpful assistant that can respond to two types of user requests:
+                            Product search queries — respond in JSON format.
+                            Currency conversion queries — respond in plain text.
+                            Instructions:
+                            If the request involves searching for products, respond ONLY with a JSON object in the following format:
+                            {
+                                "explanation": "A brief explanation of the product search result.",
+                                "products": 
+                                [
+                                    {
+                                        "title": "Product title",
+                                        "url": "Product URL",
+                                        "imageUrl": "Product image URL",
+                                        "price": "Price with currency",
+                                        "discount": "Discount value (if any)",
+                                        "productType": "Type of product"
+                                    },
                                 ...
-                            ]
-                        }
-
-                        Make sure:
-                        - The "explanation" is a short, friendly message.
-                        - The "products" array contains all relevant products matching the query.
-                        - Use exact JSON syntax with double quotes.
-                        - Do not add any extra text outside the JSON.
-                        `
+                                ]
+                            }
+                            Important rules for product search responses:
+                            Do not include any text outside the JSON.
+                            Use exact JSON syntax with double quotes.
+                            If the request is about currency conversion, respond ONLY with plain text in the format:
+                            "100 USD = 92.34 EUR"
+                            Important rules for currency conversion responses:
+                            Do not add any explanation, context, or extra text.
+                            Only output the conversion result as a single sentence.
+                            `
                     }
                 ],
             });
