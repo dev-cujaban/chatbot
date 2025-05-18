@@ -43,9 +43,7 @@ export default function ProductList({ products }: { products: Product[] }) {
             {product.discount !== undefined ? (
               <Percent
                 size={16}
-                className={
-                  !!product.discount ? "text-green-500" : "text-red-500"
-                }
+                className={product.discount ? "text-green-500" : "text-red-500"}
               />
             ) : null}
 

@@ -5,12 +5,13 @@
     "apps/*"
   ],
   "scripts": {
+    "format": "yarn workspace frontend format && yarn workspace backend format",
+    "lint": "yarn workspace frontend lint && yarn workspace backend lint",
     "dev:backend": "yarn workspace backend start:dev",
     "dev:frontend": "yarn workspace frontend dev"
   },
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/dev-cujaban/chatbot.git",
-  
   "license": "MIT"
 }

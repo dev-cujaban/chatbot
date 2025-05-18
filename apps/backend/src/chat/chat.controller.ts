@@ -6,11 +6,11 @@ import { ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger';
 @ApiTags('ChatBot')
 @Controller('chat')
 export class ChatController {
-  constructor(private readonly chatService: ChatService) { }
+  constructor(private readonly chatService: ChatService) {}
 
   @Post()
   @ApiOperation({ summary: 'Gets user message and Returns LLM response' })
-  @ApiBody({ type: ChatRequestDto, })
+  @ApiBody({ type: ChatRequestDto })
   async chat(@Body() body: ChatRequestDto) {
     return { response: await this.chatService.chatWithTools(body.message) };
   }

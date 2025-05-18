@@ -11,6 +11,6 @@ import { ChatController } from './chat/chat.controller';
 @Module({
   imports: [ConfigModule],
   controllers: [AppController, ChatController],
-  providers: [AppService, ChatService, ProductsService]
+  providers: [AppService, ChatService, ProductsService],
 })
-export class AppModule { }
+export class AppModule {}

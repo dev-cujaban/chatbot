@@ -35,7 +35,7 @@ export default function Chat() {
       // Send the message to the server via POST request
       const axiosResponse = await axiosClient.post<{ response: string }>(
         "/chat",
-        { message: messageToSend }
+        { message: messageToSend },
       );
 
       // Extract the bot's reply text from the response
